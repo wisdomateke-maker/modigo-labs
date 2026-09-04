@@ -1,7 +1,9 @@
-def remove_duplicates(items):
-    # TODO: use a loop to build a new list with duplicates removed, keeping first occurrences
-    unique_items = []
+def count_items(items):
+    # TODO: use a for loop to build a dictionary counting each item in `items`
+    item_counts = {}
     for item in items:
-        if item not in unique_items:
-            unique_items.append(item)
-    return unique_items
+        if item in item_counts:
+            item_counts[item] += 1
+        else:
+            item_counts[item] = 1
+    return item_counts
