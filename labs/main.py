@@ -1,9 +1,10 @@
-def count_items(items):
-    # TODO: use a for loop to build a dictionary counting each item in `items`
-    item_counts = {}
-    for item in items:
-        if item in item_counts:
-            item_counts[item] += 1
-        else:
-            item_counts[item] = 1
-    return item_counts
+def list_average(numbers):
+    if not numbers:
+        return 0
+    total = 0
+    for num in numbers:
+        total += num
+
+    average = total / len(numbers)
+    return round(average, 2)
+    print(list_average([2, 4, 6]))
