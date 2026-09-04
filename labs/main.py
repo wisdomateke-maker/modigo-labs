@@ -1,10 +1,5 @@
-def list_average(numbers):
-    if not numbers:
-        return 0
+def total_word_count(sentences):
     total = 0
-    for num in numbers:
-        total += num
-
-    average = total / len(numbers)
-    return round(average, 2)
-    print(list_average([2, 4, 6]))
+    for sentence in sentences:
+        total += len(sentence.split())
+    return total
