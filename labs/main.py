@@ -1,4 +1,5 @@
-def power_of(base, exponent=2):
-    # TODO: return base raised to the power of exponent
-    return base **  exponent
-print(power_of(5))
+def format_line_item(description, amount, tax_rate=7.5, currency="$"):
+    # TODO: calculate the taxed total using tax_rate, round to 2 decimal places,
+    # and return "{description}: {currency}{total}"
+    total = round(amount + (amount * tax_rate /100), 2)
+    return f"{description}: {currency}{total}"
