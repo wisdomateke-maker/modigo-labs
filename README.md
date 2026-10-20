@@ -14,7 +14,7 @@ A small chat app where messages appear instantly for everyone in the room, with 
 
 **Tech stack**: Python + FastAPI (WebSockets), SQLite (storage), plain HTML/CSS/JavaScript (UI).
 
-**Live demo:** _paste your Render URL here after deploying_
+**Live demo:** 
 
 ---
 
@@ -33,29 +33,10 @@ A small chat app where messages appear instantly for everyone in the room, with 
 
 ---
 
-## Run it on your computer
+To Run it on your computer
 
 You need **Python 3.10 or newer**.
 
-```bash
-# 1. Go into the project folder
-cd chat-app
-
-# 2. Create a virtual environment (an isolated box for this project's packages)
-python -m venv venv
-
-# 3. Turn it on
-source venv/bin/activate        # Mac / Linux
-venv\Scripts\activate           # Windows
-
-# 4. Install the packages
-pip install -r requirements.txt
-
-# 5. Start the server
-uvicorn main:app --reload
-```
-
-Open **http://localhost:8000** in your browser. To see the real-time effect, open it in **two tabs** (or two browsers), use different names, and join the same room.
 
 ## Environment variables
 
@@ -149,15 +130,3 @@ pytest -v
 Each test uses its own temporary database, so tests never affect each other or real data.
 
 ---
-
-## Deploy for free on Render
-
-1. Push this folder to a GitHub repository.
-2. On [render.com](https://render.com), choose **New → Blueprint** (or **New → Web Service**) and connect the repository.
-3. If you create the service by hand, use:
-   - **Build command:** `pip install -r requirements.txt`
-   - **Start command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`
-   - **Health check path:** `/health`
-4. Wait for the deploy to finish, then open the URL Render gives you. That URL is what you submit.
-
-`render.yaml` already contains these
